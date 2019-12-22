@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript-2</title>
+    <link type="text/css" href="../bootstrap.css" rel="stylesheet">
+    <style>
+        #row1 {
+
+            margin-top: 200px;
+            align-content: center;
+            padding-left: 20%;
+            padding-right: 20%;
+            text-align: center;
+
+        }
+        #row2 {
+
+
+align-content: center;
+padding-left: 20%;
+padding-right: 20%;
+text-align: center;
+
+}
+    </style>
+</head>
+
+<body>
+    <div id="row1" class="row">
+        <div class="col-md-3 form-group">
+            <label for="input1">Input 1</label>
+            <input type="number" name="input1" id="input1">
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="input2">Operator</label>
+            <input type="text" name="input2" id="input2">
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="input3">Input 2</label>
+            <input type="number" name="input3" id="input3">
+        </div>
+    </div>
+    <div id="row2" class="row">
+        <div class="col-md-4 form-group">
+            <button class="btn btn-success" onclick="myfun()" type="submit">Answer</button>
+        </div>
+        <div class="col-md-4 form-group">
+            <h3 id="answer"></h3>
+        </div>
+    </div>
+    <script>
+    function myfun() {
+        let a = parseInt(document.getElementById("input1").value);
+        let op = document.getElementById("input2").value;
+        let b = parseInt(document.getElementById("input3").value);
+        
+        if(op == '+' || op == 'add'){
+
+            document.getElementById("answer").innerHTML = a+b;
+
+        }else if(op == '-'){
+            document.getElementById("answer").innerHTML = a-b;
+
+        }else if(op == '*'){
+            document.getElementById("answer").innerHTML = a*b;
+
+        }else if(op == '/'){
+            document.getElementById("answer").innerHTML = a/b;
+
+        }else{
+            document.getElementById("answer").innerHTML = "Invalid Operator";
+
+        }
+    }
+    
+    </script>
+</body>
+
+</html>

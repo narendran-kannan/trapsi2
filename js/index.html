@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../bootstrap.css">
+    <title>JavaScript Tutorial</title>
+    <style>
+        #row1 {
+
+            margin-top: 200px;
+            align-content: center;
+            padding-left: 20%;
+            padding-right: 20%;
+            text-align: center;
+
+        }
+
+        #row2 {
+            align-content: center;
+            padding-left: 20%;
+            padding-right: 20%;
+            text-align: center;
+        }
+        .btn{
+            margin-left: 40px;
+            /* padding-left: 5px;
+            padding-right: -5px; */
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div>
+      
+            <div id="row1" class="row mx-auto">
+                <div id="col1" class="col-md-3 form-group">
+                    <label for="input1">Number 1</label>
+                    <input class="form-control" type="number" id="input1">
+
+                </div>
+                <div id="col2" class="col-md-3 form-group">
+                    <label for="input2">Number 2</label>
+                    <input class="form-control" type="number" id="input2">
+
+                </div>
+                <div class="col-md-3">
+                    <h2>Answer:</h2>
+                    <h2 id="answer"></h2>
+                </div>
+
+
+            </div>
+    
+        <div id="row2" class="row">
+            <div class="form-group">
+                <button class="btn btn-info" type="button" onclick="add()">+</button>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-info" type="submit" onclick="sub()">-</button>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-info" type="submit" onclick="mul()">*</button>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-info" type="submit" onclick="div()">/</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>
+
+        function add() {
+            let a = parseInt(document.getElementById("input1").value);
+            let b = parseInt(document.getElementById("input2").value);
+            document.getElementById("answer").innerHTML =a+b;
+        }
+        function sub() {
+            let a = parseInt(document.getElementById("input1").value);
+            let b = parseInt(document.getElementById("input2").value);
+            document.getElementById("answer").innerHTML =a-b;
+            
+        }
+        function mul() {
+            let a = parseInt(document.getElementById("input1").value);
+            let b = parseInt(document.getElementById("input2").value);
+            document.getElementById("answer").innerHTML =a*b;
+            
+        }
+        function div() {
+            let a = parseInt(document.getElementById("input1").value);
+            let b = parseInt(document.getElementById("input2").value);
+            document.getElementById("answer").innerHTML =a/b;
+            
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
